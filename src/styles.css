@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Anton', sans-serif;
+    color: white;
+}
+
+button{
+    background-color: #5B337A;
+    list-style: none;
+    border: none;
+    font-size: 30px;
+    padding: 10px 20px;
+    margin: 5px;
+    color: white;
+    font-family: 'Anton', sans-serif;
+    cursor: pointer;
+    width: fit-content;
+}
+
+button:active{
+    background-color: #3c1e53;
+    cursor: pointer;
+}

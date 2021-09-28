@@ -1,0 +1,153 @@
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #5B337A;
+    height: 100vh;
+    padding-left: 20px;
+}
+
+.title{
+    font-size: 70px;
+    flex: 3;
+}
+
+.score{
+    font-size: 30px;
+    background-color: #5B337A;
+}
+
+.score-value{
+    font-size: 70px;
+}
+
+.message-box{
+    font-size: 30px;
+}
+
+.score-info-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.main-container{
+    display: flex;
+    /* flex-direction: column; */
+    flex: 3.5;
+    height: 100vh;
+    width: 100vw;
+}
+
+.option-container{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.loading-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #5B337A;
+    width: 100%;
+    height: 100vh;
+}
+
+.correct-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.correct-message .msg{
+    font-size: 70px;
+}
+
+.caption-container{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.caption-container a{
+    text-decoration: inherit;
+    color: inherit;
+    opacity: 0.3;
+}
+
+@media (max-width: 991.98px){
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-container{
+        display: flex;
+        flex-direction: row;
+        background-color: #5B337A;
+        padding: 10px;
+    }
+
+    .title{
+        font-size: 30px;
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .score{
+        font-size: 10px;
+    }
+    
+    .score-value{
+        font-size: 30px;
+    }
+
+    .score-info-container{
+        text-align: end;
+    }
+
+    .option-container{
+        width: 100%;
+        right: 0px;
+    }
+
+    .option-container button{
+        width: 100%;
+    }
+
+    .message-box{
+        font-size: 30px;
+        color: #5B337A;
+    }
+
+    .caption-container{
+        top: 120px;
+        right: 20px;
+    }
+
+    .caption-container a{
+        text-decoration: inherit;
+        color: inherit;
+        opacity: 0.3;
+    }
+}

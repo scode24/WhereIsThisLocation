@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="info-container">
+    <span class="title">
+      Where is this location ?
+    </span>
+
+    <div class="score-info-container">
+      <span class="score">
+        Your score
+      </span>
+
+      <span class="score-value">
+        {{score}}
+      </span>
+    </div>
+
+  </div>
+
+  <div class="main-container">
+
+    <ng-template [ngIf]="photoData == null">
+      <div class="loading-screen">
+        <span class="correct-message" *ngIf="!isFirstLoading">
+          <span class="msg">{{correctMsg}}</span>
+          <span>Loading next location</span>
+        </span>
+        <span *ngIf="isFirstLoading">
+          Loading next location
+        </span>
+      </div>
+    </ng-template>
+
+
+    <ng-template [ngIf]="photoData != null">
+      <img [src]="photoUrl" height="100%" width="100%" alt="Loading photo..." />
+
+      <div class="option-container">
+        <span class="message-box" *ngIf="isGameOver">
+          Game Over!
+        </span>
+
+        <span class="message-box" *ngIf="!isCorrectSelection && optionSelected && !isGameOver">
+          Oops! You have one more chance left
+        </span>
+
+        <ng-template [ngIf]="!isCorrectSelection && !isGameOver">
+          <button (click)="selectOption(0)">{{country1}}</button>
+          <button (click)="selectOption(1)">{{country2}}</button>
+          <button (click)="selectOption(2)">{{country3}}</button>
+        </ng-template>
+
+        <button (click)="generatePhotoOption(true)" *ngIf="isGameOver">Play again</button>
+
+      </div>
+    </ng-template>
+
+    <div class="caption-container">
+      <a href="https://github.com/scode24">@scode24</a>
+    </div>
+
+  </div>
+</div>
